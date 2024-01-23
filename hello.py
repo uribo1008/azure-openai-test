@@ -8,11 +8,12 @@ client = AzureOpenAI(
 response = client.chat.completions.create(
     model="hjmr_gpt35",
     messages=[
-        {"role": "system", "content": "You are a helpful assistant. Answer in Japanese."},
+        {"role": "system", "content": "You are a helpful assistant answering in Japanese."},
         {"role": "user", "content": "Does Azure OpenAI support customer managed keys?"},
         {"role": "assistant", "content": "はい。Azure OpenAIではカスタマー管理キーがサポートされます。"},
         {"role": "user", "content": "Do other Azure AI services support this too?"},
     ],
 )
 
-print(response.choices[0].message.content)
+for idx in range(len(response.choices)):
+    print(idx, response.choices[idx].message.content)
