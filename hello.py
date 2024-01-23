@@ -6,7 +6,7 @@ client = AzureOpenAI(
 )
 
 response = client.chat.completions.create(
-    model="mulabo_gpt35",
+    model="hjmr_gpt35",
     messages=[
         {"role": "system", "content": "You are a helpful assistant. Answer in Japanese."},
         {"role": "user", "content": "Does Azure OpenAI support customer managed keys?"},
