@@ -12,7 +12,7 @@ if azure_openai_endpoint is None or azure_openai_key is None:
 client = AzureOpenAI(azure_endpoint=azure_openai_endpoint, api_key=azure_openai_key, api_version="2023-05-15")
 
 response = client.chat.completions.create(
-    model="hjmr_gpt4o",
+    model="hjmr-gpt4o",
     messages=[
         {"role": "system", "content": "You are a helpful assistant answering in Japanese."},
         {"role": "user", "content": "Does Azure OpenAI support customer managed keys?"},
